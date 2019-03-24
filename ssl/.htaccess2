@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on [NC]
+RewriteCond %{HTTP_HOST} ^www\.steemeditor\.com\.ve$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.steemeditor\.com\.ve$
+RewriteRule ^(.*)$ https://steemeditor.com.ve/$1 [R=301,L,NE]

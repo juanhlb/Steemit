@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Steemeditor-principal</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="Editor para las publicaciones de Steemit">
+		<meta name="author" content="Juan Leiva">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+	
+		<script src="js/angular.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/app.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116717156-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-116717156-1');
+		</script>
+
+	</head>
+	<body ng-app="editor" ng-controller="editorctrl" oncontextmenu="return false">
+	<div id="inicio" class="ses" ng-hide="token!=''">
+		<a href="registro.php">Registro</a> |
+		<a href="inisesion.php">Inicio de sesión</a>	</div>
+	<div id="cerrarses" class="ses" ng-show="token!=''">
+		<a href="#" ng-click="cerrars()">Cerrar sesión</a></div>
+	<div class="header">
+		
+			<div class="container">
+				<div id="logo"><img src='ico/se100.png' width="80px" height="50px">
+				<div style="display: inline-block;">Steemeditor<span style="color:#280422" id="beta">beta</span></div>
+			
+			</div>
+				
+			</div>
+	</div>
+		<div class="nav-bar">
+			<div class="container">
+				<ul class="nav">
+					<li id="ppal"><a href="http://steemeditor.com.ve/">Principal</a></li>
+					<li id="edtor" ng-show="token!=''"><a href="post_editor.php">Editor</a></li>
+					<li id="cfg" ng-show="token!=''"><a href="config.php">Configuración</a></li>
+					<li id="userg" ><a href="guiausuario.php">Guia de usuario</a></li>
+					<li id="sop" ng-show="pago==1"><a href="soporte.php">Soporte</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div class="main">
+				<!--contenido -->
+					<h1>¿Qué es Steemeditor?</h1>
+					<p align="justify">Es una aplicación web desarrollada para los usuarios de Steemit. Permite acomodar el diseño de sus publicaciones (post) mediante el control de los botones en la barra de herramientas, sin necesidad de escribir o tener conocimiento de códigos de estilos de páginas web.</p>
+					
+					Ver más características
+					<p align="justify">
+					<hr>
+					
+					<h1>Beneficios</h1>
+					<center>
+						<div class="ben"> <img src="imagenes/chequeado.png" width="35" height="40"> <span>Fácil arreglo del post </span></div>
+						<div class="ben"> <img src="imagenes/chequeado.png" width="35" height="40"> <span>Corrector ortográfico </span></div>
+						<div class="ben"> <img src="imagenes/chequeado.png" width="35" height="40"> <span>Control del diseño seleccionando el texto </span></div>
+						<div class="ben"> <img src="imagenes/chequeado.png" width="35" height="40"> <span>Posibilidad de publicar el post desde el editor </span></div>
+						<div class="ben"> <img src="imagenes/chequeado.png" width="35" height="40"> <span>Mejora la apariencia de los post en menor tiempo </span></div>
+						<div class="ben"> <img src="imagenes/chequeado.png" width="35" height="40"> <span>Posibilidad de guardar el post en un archivo de texto </span></div>
+						<div class="ben"> <img src="imagenes/chequeado.png" width="35" height="40"> <span>Fácil etiquetado </span></div>
+					</center>
+					
+					
+					<hr>
+					
+					<h1>Limitaciones</h1>
+					<ul>
+						<li> <p align="justify"> No se podrá cargar las imágenes directamente desde steemeditor, es necesario subirlas a otra página web que permita el alojamiento de imágenes, por ejemplo Facebook, Pinterest, Mega.nz, google drive , one drive... </p></li>
+					</ul>
+					<hr>
+					
+					<h1>Precio</h1>
+					<ul>
+						<li><p align="justify">Para usuarios de steemit con <b>más de 20 steem power</b>, tienen <b>15 días</b> de uso gratis, si desea continuar con el editor el costo es <b>0.5 STD</b></p></li>
+						<li><p align="justify">Para usuarios de steemit con <b>menos de 20 steem power</b>, tienen <b>2 meses</b> de uso gratis, si desea continuar con el editor el costo es <b>0.15 STD</b></p></li>
+					</ul>
+					
+					<div id="mensaje">
+					<p align="justify">El depósito se realizará una sóla vez para adquirir la licencia de uso ilimitada.</p>
+					El descuento para los usuarios con menos de 20 steem power es para que reciban un apoyo en su comienzo en steemit.
+					</div>
+					
+					<hr>
+					<h1>¿Cómo empezar?</h1>
+					Registrese aquí
+					
+						
+				</div>
+			</div>
+		</div>
+<!--	pie de página  -->	
+		<div class="footer">
+			<div class="container">
+				Steemeditor - desarrollado por Juan Leiva (juanhlb) 
+			</div>
+		</div>
+	</body>
+</html>

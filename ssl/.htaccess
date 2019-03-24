@@ -1,0 +1,1 @@
+RewriteEngine On RewriteCond %{HTTP_HOST} ^http://steemeditor.com.ve/RewriteRule ^(.*)$ https://steemeditor.com.ve/$1 [R=301,L]RewriteRule ^(.*)\.php$ $1.html%{QUERY_STRING} [L]
